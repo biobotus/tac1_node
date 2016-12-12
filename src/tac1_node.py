@@ -231,6 +231,8 @@ class Tac1_Node():
             'target_turbidity_goal': self.parameters['target_turbidity_goal'],
             'refresh_rate_goal': self.parameters['refresh_rate_goal'],
             'motor_speed_goal': self.parameters['motor_speed_goal'],
+            'turb_0' = self.calib_values['turb_0'],
+            'turb_100' = self.calib_values['turb_100']
         }
         json_msg.update(self.actual_values)
         self.tac1_to_biobot.publish(json.dumps(json_msg))
